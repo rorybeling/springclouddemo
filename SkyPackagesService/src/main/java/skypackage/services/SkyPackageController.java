@@ -46,6 +46,18 @@ public class SkyPackageController {
         }
         return new ResponseEntity<SkyPackage>(skyPackage, HttpStatus.OK);
     }
+    
+    //-------------------Retrieve Single SkyPackage--------------------------------------------------------
+    @RequestMapping(value = "/skypackage/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<SkyPackage> getskyPackage(@PathVariable("name") String name) {
+        System.out.println("Fetching SkyPackage with name " + name);
+        SkyPackage skyPackage = skyPackageService.findSkyPackageByName(name);
+        if (skyPackage == null) {
+            System.out.println("SkyPackage with name " + name + " not found");
+            return new ResponseEntity<SkyPackage>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<SkyPackage>(skyPackage, HttpStatus.OK);
+    }
 
     //-------------------Create a SkyPackage--------------------------------------------------------
     @RequestMapping(value = "/skypackage/", method = RequestMethod.POST)
