@@ -1,4 +1,4 @@
-package src.main.java.skypackage.services;
+package src.src.main.java.skypackage.services;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

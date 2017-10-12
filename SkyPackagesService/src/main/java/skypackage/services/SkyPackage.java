@@ -1,4 +1,4 @@
-package src.main.java.skypackage.services;
+package src.src.main.java.skypackage.services;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,16 +8,16 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "package")
-public class Package {
+@Table(name = "skypackages")
+public class SkyPackage {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
-    private long price;
+    private double price;
     private String name;
 
-    public Package(long id, long price, String name, Date reservationDate) {
+    public SkyPackage(long id, long price, String name, Date reservationDate) {
         this.id = id;
         this.price = price;
         this.name = name;
@@ -31,11 +31,11 @@ public class Package {
         this.id = id;
     }
 
-    public long getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -49,6 +49,6 @@ public class Package {
 
     @Override
     public String toString() {
-        return String.format("%d Package[%s] price for %d", id, name, price);
+        return String.format("%d SkyPackage[%s] price for %d", id, name, price);
     }
 }
