@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: businessinfo
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: businessinfo
+
+server:
+  port: 8091

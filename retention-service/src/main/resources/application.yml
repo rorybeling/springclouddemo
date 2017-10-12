@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: retentionservice
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: retention
+
+server:
+  port: 8090
