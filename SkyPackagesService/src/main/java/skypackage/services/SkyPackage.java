@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "skypackages")
+@Table(name = "skyPackage")
 public class SkyPackage {
 
     @Id
@@ -17,7 +17,7 @@ public class SkyPackage {
     private double price;
     private String name;
 
-    public SkyPackage(long id, long price, String name, Date reservationDate) {
+    public SkyPackage(long id, long price, String name) {
         this.id = id;
         this.price = price;
         this.name = name;

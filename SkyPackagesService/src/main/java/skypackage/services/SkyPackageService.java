@@ -22,9 +22,9 @@ public class SkyPackageService {
         return skyPackageDAO.exists(id);
     }
 
-    public SkyPackage findSkyPackageBySkyPackage(SkyPackage skyPackage) {
-        return skyPackageDAO.findSkyPackageBySkyPackage(skyPackage);
-    }
+//    public SkyPackage findSkyPackage(SkyPackage skyPackage) {
+//        return skyPackageDAO.findSkyPackage(skyPackage);
+//    }
 
     public List<SkyPackage> findAllSKyPackages() {
         return skyPackageDAO.findAll();

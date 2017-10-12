@@ -46,7 +46,7 @@ public class SkyPackageController {
         }
         return new ResponseEntity<SkyPackage>(skyPackage, HttpStatus.OK);
     }
-    
+
     //-------------------Retrieve Single SkyPackage--------------------------------------------------------
     @RequestMapping(value = "/skypackage/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SkyPackage> getskyPackage(@PathVariable("name") String name) {
