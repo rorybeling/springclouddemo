@@ -1,4 +1,6 @@
-package src.src.main.java.skypackage.services;
+package skypackage.services;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -11,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
-import java.util.List;
 
 @RestController
 @RequestMapping(value="skypackage")

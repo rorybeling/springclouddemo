@@ -1,4 +1,4 @@
-package src.src.main.java.skypackage.services;
+package skypackage.services;
 
 import java.util.List;
 

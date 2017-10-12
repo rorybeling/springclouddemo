@@ -1,4 +1,4 @@
-package src.src.main.java.skypackage.services;
+package skypackage.services;
 
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
