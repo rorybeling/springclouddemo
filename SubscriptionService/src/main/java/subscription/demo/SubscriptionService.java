@@ -10,7 +10,7 @@ public class SubscriptionService {
 
     ConcurrentHashMap<String,Subscription> subscribers = new ConcurrentHashMap<>();
 
-    public Subscription createSubscriber(String name, List<String> packages) {
+    public Subscription createSubscriber(String name, List<SkyPackage> packages) {
 
         Subscription subscription = subscribers.get(name);
 
@@ -21,15 +21,23 @@ public class SubscriptionService {
         return subscription;
     }
 
-    public void addPackage(String name, String _package) {
+    public Subscription addPackage(String name, SkyPackage _package) {
 
         Subscription subscription = subscribers.get(name);
         subscription.addPackage(_package);
+
+        return subscription;
     }
 
-    public void removePackage(String name, String _package) {
+    public Subscription removePackage(String name, String _package) {
 
         Subscription subscription = subscribers.get(name);
         subscription.removePackage(_package);
+
+        return subscription;
+    }
+
+    public ConcurrentHashMap<String,Subscription> getSubscriberDetails() {
+        return subscribers;
     }
 }

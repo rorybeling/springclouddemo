@@ -5,9 +5,9 @@ import java.util.List;
 public class Subscription {
 
     String username;
-    List<String> packages;
+    List<SkyPackage> packages;
 
-    public Subscription(String username, List<String> packages) {
+    public Subscription(String username, List<SkyPackage> packages) {
         this.username = username;
         this.packages = packages;
     }
@@ -20,19 +20,20 @@ public class Subscription {
         this.username = username;
     }
 
-    public List<String> getPackages() {
+    public List<SkyPackage> getPackages() {
         return packages;
     }
 
-    public void setPackages(List<String> packages) {
+    public void setPackages(List<SkyPackage> packages) {
         this.packages = packages;
     }
 
-    public void addPackage(String _package) {
+    public void addPackage(SkyPackage _package) {
         this.packages.add(_package);
     }
 
-    public void removePackage(String _package) {
-        this.packages.remove(_package);
+    public void removePackage(String packageName) {
+
+        this.packages.removeIf(packagename -> packagename.equals(packageName));
     }
 }
