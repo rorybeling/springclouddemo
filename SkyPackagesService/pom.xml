@@ -9,8 +9,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Reservation Services</name>
-    <description>Simple demo of aPackages</description>
+    <name>Sky Packages Services</name>
+    <description>Simple demo of sky packages</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
