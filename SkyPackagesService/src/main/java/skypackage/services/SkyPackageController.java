@@ -27,12 +27,13 @@ public class SkyPackageController {
 
     //-------------------Retrieve All skyPackages--------------------------------------------------------
     @RequestMapping(value = "/skypackage/", method = RequestMethod.GET)
-    public ResponseEntity<List<SkyPackage>> listAllskyPackage() {
+    public ResponseEntity<SkyPackages> listAllSkyPackage() {
         List<SkyPackage> packages = skyPackageService.findAllSKyPackages();
+        SkyPackages skyPackages = new SkyPackages(packages);
         if(packages.isEmpty()){
-            return new ResponseEntity<List<SkyPackage>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+            return new ResponseEntity<SkyPackages>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
-        return new ResponseEntity<List<SkyPackage>>(packages, HttpStatus.OK);
+        return new ResponseEntity<SkyPackages>(skyPackages, HttpStatus.OK);
     }
 
     //-------------------Retrieve Single SkyPackage--------------------------------------------------------
