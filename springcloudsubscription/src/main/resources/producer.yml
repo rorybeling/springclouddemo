@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: rawtimeproducer
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: rawdest1
+
+server:
+  port: 8081
+
